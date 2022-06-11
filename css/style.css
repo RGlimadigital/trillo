@@ -51,7 +51,6 @@ body {
 
 .header {
   height: 7rem;
-  padding: 0 1rem;
   font-size: 1.4rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
@@ -77,6 +76,7 @@ body {
 
 .logo {
   height: 3.25rem;
+  margin-left: 2rem;
 }
 
 .search {
@@ -129,23 +129,45 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-basis: 20%;
+  align-self: stretch;
+}
+.user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.user-nav > *:hover {
+  background-color: var(--color-grey-light-2);
+}
+.user-nav__icon-box {
+  position: relative;
 }
 .user-nav__icon {
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--color-grey-dark-2);
 }
-.user-nav__user {
+.user-nav__notification {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .user-nav__user-photo {
   height: 3.25rem;
   border-radius: 50%;
-}
-.user-nav__user-name {
-  align-self: center;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

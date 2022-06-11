@@ -2,6 +2,7 @@
 //// LOGO
 .logo {
   height: 3.25rem;
+  margin-left: 2rem;
 }
 
 /////////////////////////////
@@ -63,25 +64,48 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-basis: 20%;
-  &__icon-box {
-  }
-  &__icon {
-    height: 2.25rem;
-    width: 2.25rem;
-  }
-  &__notification {
-  }
-  &__user {
+  align-self: stretch;
+
+  & > * {
+    padding: 0 2rem;
+    //Cursor indicando clique
+    cursor: pointer;
+    height: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
   }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-grey-dark-2);
+  }
+  &__notification {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__user-photo {
     height: 3.25rem;
     border-radius: 50%;
-  }
-  &__user-name {
-    align-self: center;
+    margin-right: 1rem;
   }
 }
