@@ -7,19 +7,63 @@
 /////////////////////////////
 //// SEARCH-BOX
 .search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    border-radius: 4rem;
+    padding: 0.7rem 2rem;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.5rem;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--color-grey-light-4);
+      font-weight: 100;
+    }
   }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
   &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      margin-left: 3.5rem;
+    }
+    &:active {
+      transform: translateY(2px);
+    }
   }
   &__icon {
     height: 2rem;
     width: 2rem;
+    //Com a propriedade fill podemos mudar a cor de um SVG
+    fill: var(--color-grey-dark-3);
   }
 }
 
 /////////////////////////////
 //// USER-NAV
 .user-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 20%;
   &__icon-box {
   }
   &__icon {
@@ -29,11 +73,15 @@
   &__notification {
   }
   &__user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   &__user-photo {
     height: 3.25rem;
     border-radius: 50%;
   }
   &__user-name {
+    align-self: center;
   }
 }

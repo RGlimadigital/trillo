@@ -11,6 +11,7 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --shadow--dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -33,7 +34,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--color-bg-light), var(--color-bg-dark));
+  background-image: linear-gradient(to right bottom, var(--color-bg-light), var(--color-primary-dark));
   color: var(--color-grey-dark-2);
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,4 +43,47 @@ body {
 
 .container {
   max-width: 120rem;
+  min-height: 50rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+}
+
+.hotel-view {
+  background-color: orangered;
+  flex: 1;
+}
+
+.logo {
+  height: 3.25rem;
+}
+
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.user-nav__user-photo {
+  height: 3.25rem;
+  border-radius: 50%;
 }
